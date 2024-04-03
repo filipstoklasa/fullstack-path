@@ -1,0 +1,23 @@
+{
+  "name": "node-js-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/filipstoklasa/fullstack-path.git",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "command": "node ./dist/index.js",
+    "test:build": "tsc --p ./tsconfig.test.json",
+    "test:cleanup": "rm -rf ./dist-test",
+    "test": "yarn test:build && node --test ./dist-test && yarn test:cleanup"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.3",
+    "typescript": "^5.4.3",
+    "vitest": "^1.4.0"
+  }
+}
